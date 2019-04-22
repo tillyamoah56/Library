@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookDetails">
+
+    <ImageView
+        android:id="@+id/cover_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/book"/>
+
+    <TextView
+        android:layout_below="@+id/cover_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:id="@+id/book_title"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_below="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/author_text"
+        android:text="Author"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_below="@+id/author_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publishing Date"
+        android:id="@+id/date_of_publishing"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_below="@+id/date_of_publishing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edition"
+        android:id="@+id/edition"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_below="@+id/edition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/copies_available"
+        android:text="Copies Available"
+        android:textSize="25sp"/>
+
+</RelativeLayout>
