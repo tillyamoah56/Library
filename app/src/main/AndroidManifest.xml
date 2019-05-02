@@ -23,7 +23,7 @@
         </activity>
         <activity
             android:name=".activities.MainActivity"
-            android:label="Home"
+            android:label="Library"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
             android:name=".activities.LoginActivity"
@@ -36,10 +36,11 @@
         <activity android:name=".activities.BorrowedBooks" />
         <activity android:name=".activities.AugmentedReality" />
         <activity android:name=".activities.Library" />
-        <activity android:name=".Profile" />
+        <activity android:name=".Profile"  android:label="My Profile"/>
         <activity android:name=".Settings" />
         <activity android:name=".HelpAndFeedback" />
-        <activity android:name=".activities.BookDetails"></activity>
+        <activity android:name=".activities.BookDetails" />
+        <activity android:name=".activities.ReservedBook" android:parentActivityName=".activities.MainActivity"/>
     </application>
 
 </manifest>

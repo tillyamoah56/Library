@@ -12,16 +12,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
-
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.manueleagzample.splashscreen.Profile;
 import com.example.manueleagzample.splashscreen.R;
 import com.example.manueleagzample.splashscreen.adapters.BooksAdapter;
 import com.example.manueleagzample.splashscreen.service.LibraryService;
@@ -45,8 +44,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        prefsManager = new PrefsManager(this);
 
         initViews();
         initDrawer();
@@ -112,7 +109,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Borrowed books", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.profile:
+                Intent i = new Intent(MainActivity.this, Profile.class);
+                startActivity(i);
                 Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.my_reserved_books:
+                startActivity(new Intent(MainActivity.this, ReservedBook.class));
+                Toast.makeText(this, "My Reserved books", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.settings:
                 Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
@@ -132,7 +135,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return false;
         }
 
+
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -150,11 +155,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-      MenuInflater inflater=getMenuInflater();
+        MenuInflater inflater = getMenuInflater();
 //      used to inflate the menu resource
-        inflater.inflate(R.menu.search,menu);
-        MenuItem item=menu.findItem(R.id.search_bar);
-        SearchView searchView=(SearchView)item.getActionView();
+        inflater.inflate(R.menu.search, menu);
+        MenuItem item = menu.findItem(R.id.search_bar);
+        SearchView searchView = (SearchView) item.getActionView();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
@@ -169,6 +174,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
         return super.onCreateOptionsMenu(menu);
     }
+
 
 }
 //this is where I implemented my search view

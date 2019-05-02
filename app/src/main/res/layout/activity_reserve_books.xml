@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ReservedBook">
+
+    <!--<Button-->
+        <!--android:id="@+id/confirm_action"-->
+        <!--android:layout_width="120sp"-->
+        <!--android:layout_height="50sp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="120sp"-->
+        <!--android:text="confirm"-->
+        <!--android:textSize="20sp" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/edit_action"-->
+        <!--android:layout_width="120sp"-->
+        <!--android:layout_height="50sp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="250sp"-->
+        <!--android:text="edit"-->
+        <!--android:textSize="20sp" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/click_on_any"-->
+        <!--android:layout_width="100sp"-->
+        <!--android:layout_height="30sp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="10sp"-->
+        <!--android:text="click on any"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="18sp"-->
+        <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/name_of_person"-->
+        <!--android:layout_width="300sp"-->
+        <!--android:layout_height="30sp"-->
+        <!--android:layout_marginLeft="20sp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/Booktitles"-->
+        <!--android:layout_width="300sp"-->
+        <!--android:layout_height="30sp"-->
+        <!--android:layout_below="@+id/name_of_person"-->
+        <!--android:layout_marginLeft="20sp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold" />-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/book_total"-->
+        <!--android:layout_width="300sp"-->
+        <!--android:layout_height="30sp"-->
+        <!--android:layout_below="@+id/Booktitles"-->
+        <!--android:layout_marginLeft="20sp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/reservation_date"-->
+        <!--android:layout_width="300sp"-->
+        <!--android:layout_height="30sp"-->
+        <!--android:layout_below="@+id/book_total"-->
+        <!--android:layout_marginLeft="20sp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold" />-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/Pickup_date"-->
+        <!--android:layout_width="300sp"-->
+        <!--android:layout_height="30sp"-->
+        <!--android:layout_below="@+id/reservation_date"-->
+        <!--android:layout_marginLeft="20sp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold" />-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/no_reserved_book_container"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/book"
+            android:layout_margin="16dp"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:layout_below="@id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_centerHorizontal="true"
+            android:text="No Reserved Books"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

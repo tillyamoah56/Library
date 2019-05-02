@@ -19,21 +19,25 @@
         android:layout_height="wrap_content"
         android:text="Title"
         android:id="@+id/book_title"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_below="@+id/book_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/author_text"
         android:text="Author"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"/>
+
     <TextView
         android:layout_below="@+id/author_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Publishing Date"
         android:id="@+id/date_of_publishing"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_below="@+id/date_of_publishing"
@@ -41,13 +45,36 @@
         android:layout_height="wrap_content"
         android:text="Edition"
         android:id="@+id/edition"
-        android:textSize="25sp"/>
-    <TextView
-        android:layout_below="@+id/edition"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"/>
+    />
+   <TextView
+    android:layout_below="@+id/edition"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/copies_available"
+    android:text="Copies Available"
+    android:textSize="25sp"
+       android:layout_centerHorizontal="true"/>
+    />
+
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/copies_available"
-        android:text="Copies Available"
-        android:textSize="25sp"/>
+        android:text="Reserve Book"
+        android:textSize="20sp"
+        android:layout_below="@id/copies_available"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/reserve_button"
+/>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/reserve_button"/>
+
 
 </RelativeLayout>

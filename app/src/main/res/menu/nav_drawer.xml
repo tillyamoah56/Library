@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:id="@+id/group_one">
+
         <item
             android:id="@+id/profile"
             android:title="Profile"
@@ -12,6 +13,7 @@
         <item android:id="@+id/library"
             android:title="Library"
             android:icon="@drawable/ic_library_black"
+            android:checked="true"
             app:showAsAction="ifRoom"/>
 
         <item android:id="@+id/borrowed_books"
@@ -26,6 +28,11 @@
         <item android:id="@+id/e_books"
             android:title="E-books"
             android:icon="@drawable/ebooks"
+            app:showAsAction="ifRoom"/>
+
+        <item android:id="@+id/my_reserved_books"
+            android:title="My reseved books"
+            android:icon="@drawable/ic_folder_black_24dp"
             app:showAsAction="ifRoom"/>
 
     </group>

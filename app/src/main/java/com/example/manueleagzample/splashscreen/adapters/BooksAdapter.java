@@ -30,7 +30,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder>{
     public static Filter getFilter() {
         return null;
     }
-//    this is where filtered for the search of books based on the author,title and category
+//    this is where the filter for the search of books based on the author,title and category
 
 
 
