@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        prefsManager = new PrefsManager(this);
         initViews();
         initDrawer();
         initListeners();
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         recyclerView = findViewById(R.id.recycler_view);
         progressBar = findViewById(R.id.progress_circular);
+
 //        loadingTextView = findViewById(R.id.textLoading);
 
         LibraryService.generateBooks();
