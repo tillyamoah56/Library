@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Splashscreen</string>
+    <string name="app_name">Library App</string>
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -13,6 +13,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <string name="write_file">This app needs access to your file storage so that it can write files.</string>
+
     <string name="register">Register</string>
     <string name="surname">surname</string>
     <string name="othernames">othernames</string>
@@ -21,4 +24,5 @@
     <string name="openDrawer">Open Drawer</string>
     <string name="closeDrawer">Closer Drawer</string>
     <string name="search">Search</string>
+    <string name="book_image">book image</string>
 </resources>

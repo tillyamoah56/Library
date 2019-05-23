@@ -13,12 +13,13 @@ public class LibraryBooks {
     private int count;
     private String coverPage;
     private Date publishingDate;
+    private String pdfURL;
 
     public LibraryBooks() {
     }
 
     public LibraryBooks(String title, String bookid, String author, String category, boolean borrowable, boolean pdfSupported, boolean referenceOnly, int count,String coverPage,
-                        Date publishingDate) {
+                        Date publishingDate, String pdfURL) {
         this.title = title;
         this.bookid = bookid;
         this.author = author;
@@ -29,6 +30,11 @@ public class LibraryBooks {
         this.count = count;
         this.coverPage = coverPage;
         this.publishingDate=publishingDate;
+        if(this.pdfSupported) {
+            this.pdfURL = pdfURL;
+        }else {
+            this.pdfURL = "";
+        }
     }
 
     public String getTitle() {
@@ -111,9 +117,29 @@ public class LibraryBooks {
         return this.count > 0;
     }
 
+    public String getPdfURL() {
+        return pdfURL;
+    }
+
+    public void setPdfURL(String pdfURL) {
+        this.pdfURL = pdfURL;
+    }
+
     @Override
     public String toString() {
-        return "LibraryBooks{" + "title='" + title + '\'' + ", bookid='" + bookid + '\'' + ", author='" + author + '\'' + ", category='" + category + '\'' + ", borrowable=" + borrowable + ", pdfSupported=" + pdfSupported + ", referenceOnly=" + referenceOnly + ", count=" + count + ", coverPage='" + coverPage + '\'' + ", publishingDate=" + publishingDate + '}';
+        return "LibraryBooks{" +
+                "title='" + title + '\'' +
+                ", bookid='" + bookid + '\'' +
+                ", author='" + author + '\'' +
+                ", category='" + category + '\'' +
+                ", borrowable=" + borrowable +
+                ", pdfSupported=" + pdfSupported +
+                ", referenceOnly=" + referenceOnly +
+                ", count=" + count +
+                ", coverPage='" + coverPage + '\'' +
+                ", publishingDate=" + publishingDate +
+                ", pdfURL='" + pdfURL + '\'' +
+                '}';
     }
 }
 

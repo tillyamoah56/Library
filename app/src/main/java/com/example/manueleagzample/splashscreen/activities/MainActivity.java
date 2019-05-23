@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 finish();
                 return true;
             case R.id.e_books:
-                Toast.makeText(this, "E-books", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, Ebooks.class));
                 return true;
             default:
                 return false;
