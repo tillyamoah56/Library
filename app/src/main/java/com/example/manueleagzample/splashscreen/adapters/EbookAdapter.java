@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.manueleagzample.splashscreen.R;
 import com.example.manueleagzample.splashscreen.activities.EbookPreview;
@@ -60,7 +61,7 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.ViewHolder> 
             public void onClick(View view) {
                 Ebooks.pdfURL = book.getPdfURL();
                 Ebooks.book = book;
-
+                Toast.makeText(context, "Downloading book", Toast.LENGTH_LONG).show();
                 Downloader.download(book, context);
             }
         });

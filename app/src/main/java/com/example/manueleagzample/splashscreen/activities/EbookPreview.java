@@ -48,7 +48,7 @@ public class EbookPreview extends AppCompatActivity {
         Uri bookUri =  Uri.parse(books.getPdfURL());
 
 
-//        pdfView.getSettings().setJavaScriptEnabled(true);
+        pdfView.getSettings().setJavaScriptEnabled(true);
         pdfView.loadUrl(books.getPdfURL());
 //        pdfView.fromUri(bookUri)
 //                .enableSwipe(true)

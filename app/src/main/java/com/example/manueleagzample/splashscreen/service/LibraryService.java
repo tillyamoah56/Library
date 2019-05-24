@@ -51,7 +51,7 @@ public class LibraryService {
 
     public static void generateBooks() {
         if (books.size() == 0) {
-            LibraryBooks book1 = new LibraryBooks("Java Simplified", "AP001", "Dr. Daniel Agbemava" ,"Programming" ,true ,true,false,10, "", null, "http://maven.apache.org/maven-1.x/maven.pdf ");
+            LibraryBooks book1 = new LibraryBooks("Java Simplified", "AP001", "Dr. Daniel Agbemava" ,"Programming" ,true ,true,false,10, "", null, "http://maven.apache.org/maven-1.x/maven.pdf");
             LibraryBooks book2 = new LibraryBooks("Introduction to mathematics", "AM002", "Miss.Matilda Ampoma" ,"Mathematics" , true ,false ,false ,8,"",null, null);
             LibraryBooks book3= new LibraryBooks("Introduction to discrete mathematics", "AM003", "Miss.Matilda Ampoma" ,"Mathematics" ,false ,true ,true ,3, "", null, null);
             LibraryBooks book4= new LibraryBooks("Simplified to code in VB", "AP004", "Miss.Theresa Ebuoh" ,"Programming" ,true, false,false ,9,"",null, null);
